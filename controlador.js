@@ -60,6 +60,18 @@ function capturarDatos(){
     let costoTotal=document.getElementById("costoTotal");
     costoTotal.textContent=`Costo Total: $${(calcularCostoCasillero(pesoConsola,cantidad))+(calcularCostoImpuestos(precioConsola,cantidad))}USD`;
 
+    let hr1=document.getElementById("hr1");
+    hr1.classList.remove("invisible");
+    hr1.classList.add("visible");
+
+    let hr2=document.getElementById("hr2");
+    hr2.classList.remove("invisible");
+    hr2.classList.add("visible");
+
+    let botonCop=document.getElementById("botonCop");
+    botonCop.classList.remove("invisible");
+    botonCop.classList.add("visible");
+
 
  
 
@@ -146,4 +158,45 @@ function calcularCostoImpuestos(costoConsola,cantidad){
 function limpiarCarrito(){
 
     console.log("hiciste clic en limpiar");
+    let fotoCarrito=document.getElementById("fotoCarrito");
+    fotoCarrito.src="https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/fotoCarrito.PNG?raw=true";
+
+    let tituloCarrito=document.getElementById("tituloCarrito");
+    tituloCarrito.textContent=`Tu Carrito de Amazon está vacío`;
+
+    let precioIndividual=document.getElementById("precioUnitarioCarrito");
+    precioIndividual.textContent=``;
+
+    let pesoIndividual=document.getElementById("pesoUnitarioCarrito");
+    pesoIndividual.textContent=``;
+
+    let pesoTotal=document.getElementById("pesoTotalCarrito");
+    pesoTotal.textContent=``;
+
+    let costoCasillero=document.getElementById("costoCasillero");
+    costoCasillero.textContent=``;
+
+    let costoImpuestos=document.getElementById("costoImpuestos");
+    costoImpuestos.textContent=``;
+
+    let costoTotal=document.getElementById("costoTotal");
+    costoTotal.textContent=``;
+
+
+    let hr1=document.getElementById("hr1");
+    hr1.classList.remove("visible");
+    hr1.classList.add("invisible");
+
+    let hr2=document.getElementById("hr2");
+    hr2.classList.remove("visible");
+    hr2.classList.add("invisible");
+
+    pildora.classList.remove("visible");
+    pildora.classList.add("invisible");
+
+    let botonCop=document.getElementById("botonCop");
+    botonCop.classList.remove("visible");
+    botonCop.classList.add("invisible");
+
+
 }
