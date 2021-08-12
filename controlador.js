@@ -9,16 +9,17 @@ let fotoConsola;
 
 let boton=document.getElementById("boton");
 let botonLimpiar=document.getElementById("botonLimpiar");
+let botonCop=document.getElementById("botonCop");
 
 //2. Detectar click en el boton
 boton.addEventListener("click",capturarDatos); //callback una llama a otra 2en1
 
 botonLimpiar.addEventListener("click",limpiarCarrito);
+botonCop.addEventListener("click", conversionCop);
 
 //3. CREAR FUNCION PROPIA NOMBRADA ANT
 function capturarDatos(){
 
-    //console.log("clic");
 
     //4.capturar los valores del formulario 
     // creo tantas variables como vlrs del formulario
@@ -55,7 +56,7 @@ function capturarDatos(){
     costoCasillero.textContent=`Costo Casillero: $${calcularCostoCasillero(pesoConsola,cantidad)} USD`;
 
     let costoImpuestos=document.getElementById("costoImpuestos");
-    costoImpuestos.textContent=`Costo venta (impuestos):$${calcularCostoImpuestos(precioConsola, cantidad)}`;
+    costoImpuestos.textContent=`Impuestos: $${calcularCostoImpuestos(precioConsola, cantidad)}`;
 
     let costoTotal=document.getElementById("costoTotal");
     costoTotal.textContent=`Costo Total: $${(calcularCostoCasillero(pesoConsola,cantidad))+(calcularCostoImpuestos(precioConsola,cantidad))}USD`;
@@ -82,10 +83,10 @@ function capturarDatos(){
 function seleccConsola(opcion){
 
     let consolas={
-        nombres:Array("PS5","XBOX Serie X", "Nintendo Switch"),
-        precios:Array(750,700,409),
-        pesos:Array(14.2,13.1,4.75),
-        fotos:Array("https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/ps5.jpg?raw=true","https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/xbox.jpg?raw=true","https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/nintendo.jpg?raw=true")
+        nombres:Array("PS5","XBOX Serie X", "Nintendo Switch", "Macbook Air"),
+        precios:Array(750,700,409,381),
+        pesos:Array(14.2,13.1,4.75,2.38),
+        fotos:Array("https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/ps5.jpg?raw=true","https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/xbox.jpg?raw=true","https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/nintendo.jpg?raw=true","https://github.com/evisborja/img/blob/main/mackbook.jpg?raw=true")
     }
 
     if (opcion==1)
@@ -112,6 +113,14 @@ function seleccConsola(opcion){
         precioConsola=consolas.precios[2];
         pesoConsola=consolas.pesos[2];
         fotoConsola=consolas.fotos[2];
+
+    }
+    else if(opcion==4)
+    {
+        nombreConsola=consolas.nombres[3];
+        precioConsola=consolas.precios[3];
+        pesoConsola=consolas.pesos[3];
+        fotoConsola=consolas.fotos[3];
 
     }
     
@@ -197,6 +206,38 @@ function limpiarCarrito(){
     let botonCop=document.getElementById("botonCop");
     botonCop.classList.remove("visible");
     botonCop.classList.add("invisible");
+
+
+}
+
+function convertirPesos(precioDolares){
+
+    const TRM=3859;
+    let precioPesos=precioDolares*TRM;
+
+    return precioPesos;
+}
+
+function conversionCop(){
+
+    let cantidad=document.getElementById("cantidad").value;
+
+    let precioIndividual=document.getElementById("precioUnitarioCarrito");
+    precioIndividual.textContent=`Costo unitario: $${convertirPesos(precioConsola)} COP`;
+
+    let costoCasillero=document.getElementById("costoCasillero");
+    costoCasillero.textContent=`Costo Casillero: $${convertirPesos(calcularCostoCasillero(pesoConsola,cantidad))} COP`;
+
+    let costoImpuestos=document.getElementById("costoImpuestos");
+    costoImpuestos.textContent=`Impuestos: $${convertirPesos(calcularCostoImpuestos(precioConsola, cantidad))}`;
+
+
+    let costoTotal=document.getElementById("costoTotal");
+    costoTotal.textContent=`Costo Total: $${convertirPesos(calcularCostoCasillero(pesoConsola,cantidad))+(calcularCostoImpuestos(precioConsola,cantidad))}COP`;
+
+
+
+
 
 
 }
