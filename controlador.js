@@ -56,7 +56,7 @@ function capturarDatos(){
     costoCasillero.textContent=`Costo Casillero: $${calcularCostoCasillero(pesoProducto,cantidad)} USD`;
 
     let costoImpuestos=document.getElementById("costoImpuestos");
-    costoImpuestos.textContent=`Costo venta con impuestos: $${calcularCostoImpuestos(precioProducto,cantidad)} USD`;
+    costoImpuestos.textContent=`Costo venta con impuestos:$${calcularCostoImpuestos(precioProducto,cantidad)} USD`;
 
     let costoTotal=document.getElementById("costoTotal");
     costoTotal.textContent=`Costo Total: $${(calcularCostoCasillero(pesoProducto,cantidad))+(calcularCostoImpuestos(precioProducto,cantidad))}USD`;
