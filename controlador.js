@@ -28,7 +28,7 @@ function capturarDatos(){
     seleccProducto(productoElegido);
 
     let cantidad=document.getElementById("cantidad").value;
-    //console.log(cantidad);
+    console.log(cantidad);
 
     let pildora=document.getElementById("pildora");
     pildora.textContent=cantidad;
@@ -56,7 +56,7 @@ function capturarDatos(){
     costoCasillero.textContent=`Costo Casillero: $${calcularCostoCasillero(pesoProducto,cantidad)} USD`;
 
     let costoImpuestos=document.getElementById("costoImpuestos");
-    costoImpuestos.textContent=`Impuestos: $${calcularCostoImpuestos(precioProducto, cantidad)}`;
+    costoImpuestos.textContent=`Costo venta con impuestos:$${calcularCostoImpuestos(precioProducto,cantidad)} USD`;
 
     let costoTotal=document.getElementById("costoTotal");
     costoTotal.textContent=`Costo Total: $${(calcularCostoCasillero(pesoProducto,cantidad))+(calcularCostoImpuestos(precioProducto,cantidad))}USD`;
@@ -86,7 +86,7 @@ function seleccProducto(opcion){
         nombres:Array("PS5","XBOX Serie X", "Nintendo Switch", "Macbook Air", "AirPods", "Audifonos Sony", "Bocina JBL", "Celular Huawei", "Monitor LG", "Mouse Microsoft", "Nevera Samsung", "SmartWacth Xiaomi", "Teclado Inalambrico", "Airbuds", "Televisor Smart"),
         precios:Array(750,700,409,381,170,98,99,800,237,20,400,150,255,175,999),
         pesos:Array(14.2,13.1,4.75,2.38,1,1.8,2.3,1.2,13.9,1.0,200,1.0,3.5,1.0,24.9),
-        fotos:Array("https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/ps5.jpg?raw=true","https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/xbox.jpg?raw=true","https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/nintendo.jpg?raw=true","https://github.com/evisborja/img/blob/main/mackbook.jpg?raw=true","https://github.com/evisborja/img/blob/main/airpods.jpg?raw=true")
+        fotos:Array("https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/ps5.jpg?raw=true","https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/xbox.jpg?raw=true","https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/nintendo.jpg?raw=true","https://github.com/evisborja/img/blob/main/mackbook.jpg?raw=true","https://github.com/evisborja/img/blob/main/airpods.jpg?raw=true", "https://github.com/evisborja/img/blob/main/audifonos.jpg?raw=true","https://github.com/evisborja/img/blob/main/bocinas.jpg?raw=true", "https://github.com/evisborja/img/blob/main/celulares.jpg?raw=true","https://github.com/evisborja/img/blob/main/monitores.jpg?raw=true","https://github.com/evisborja/img/blob/main/mouse.jpg?raw=true", "https://github.com/evisborja/img/blob/main/neveras.jpg?raw=true","https://github.com/evisborja/img/blob/main/smartwatch.jpg?raw=true","https://github.com/evisborja/img/blob/main/teclado.jpg?raw=true","https://github.com/evisborja/img/blob/main/airbuds.jpg?raw=true","https://github.com/evisborja/img/blob/main/televisor.jpg?raw=true")
     }
 
     if (opcion==1)
@@ -131,6 +131,88 @@ function seleccProducto(opcion){
         fotoProducto=productos.fotos[4];
 
     }
+    else if(opcion==6)
+    {
+        nombreProducto=productos.nombres[5];
+        precioProducto=productos.precios[5];
+        pesoProducto=productos.pesos[5];
+        fotoProducto=productos.fotos[5];
+
+    }
+    else if(opcion==7)
+    {
+        nombreProducto=productos.nombres[6];
+        precioProducto=productos.precios[6];
+        pesoProducto=productos.pesos[6];
+        fotoProducto=productos.fotos[6];
+
+    }
+    else if(opcion==8)
+    {
+        nombreProducto=productos.nombres[7];
+        precioProducto=productos.precios[7];
+        pesoProducto=productos.pesos[7];
+        fotoProducto=productos.fotos[7];
+
+    }
+    else if(opcion==9)
+    {
+        nombreProducto=productos.nombres[8];
+        precioProducto=productos.precios[8];
+        pesoProducto=productos.pesos[8];
+        fotoProducto=productos.fotos[8];
+
+    }
+    else if(opcion==10)
+    {
+        nombreProducto=productos.nombres[9];
+        precioProducto=productos.precios[9];
+        pesoProducto=productos.pesos[9];
+        fotoProducto=productos.fotos[9];
+
+    }
+    else if(opcion==11)
+    {
+        nombreProducto=productos.nombres[10];
+        precioProducto=productos.precios[10];
+        pesoProducto=productos.pesos[10];
+        fotoProducto=productos.fotos[10];
+
+    }
+    else if(opcion==12)
+    {
+        nombreProducto=productos.nombres[11];
+        precioProducto=productos.precios[11];
+        pesoProducto=productos.pesos[11];
+        fotoProducto=productos.fotos[11];
+
+    }
+    else if(opcion==13)
+    {
+        nombreProducto=productos.nombres[12];
+        precioProducto=productos.precios[12];
+        pesoProducto=productos.pesos[12];
+        fotoProducto=productos.fotos[12];
+
+    }
+    else if(opcion==14)
+    {
+        nombreProducto=productos.nombres[13];
+        precioProducto=productos.precios[13];
+        pesoProducto=productos.pesos[13];
+        fotoProducto=productos.fotos[13];
+
+    }
+    else if(opcion==15)
+    {
+        nombreProducto=productos.nombres[14];
+        precioProducto=productos.precios[14];
+        pesoProducto=productos.pesos[14];
+        fotoProducto=productos.fotos[14];
+
+    }
+
+    
     
     else{
 
@@ -231,17 +313,17 @@ function conversionCop(){
     let cantidad=document.getElementById("cantidad").value;
 
     let precioIndividual=document.getElementById("precioUnitarioCarrito");
-    precioIndividual.textContent=`Costo unitario: $${convertirPesos(precioConsola)} COP`;
+    precioIndividual.textContent=`Costo unitario: $${convertirPesos(precioProducto)} COP`;
 
     let costoCasillero=document.getElementById("costoCasillero");
-    costoCasillero.textContent=`Costo Casillero: $${convertirPesos(calcularCostoCasillero(pesoConsola,cantidad))} COP`;
+    costoCasillero.textContent=`Costo Casillero: $${convertirPesos(calcularCostoCasillero(pesoProducto,cantidad))} COP`;
 
     let costoImpuestos=document.getElementById("costoImpuestos");
-    costoImpuestos.textContent=`Impuestos: $${convertirPesos(calcularCostoImpuestos(precioConsola, cantidad))}`;
+    costoImpuestos.textContent=`Impuestos: $${convertirPesos(calcularCostoImpuestos(precioProducto, cantidad))}`;
 
 
     let costoTotal=document.getElementById("costoTotal");
-    costoTotal.textContent=`Costo Total: $${convertirPesos(calcularCostoCasillero(pesoConsola,cantidad))+(calcularCostoImpuestos(precioConsola,cantidad))}COP`;
+    costoTotal.textContent=`Costo Total: $${convertirPesos(calcularCostoCasillero(pesoProducto,cantidad))+(calcularCostoImpuestos(precioProducto,cantidad))}COP`;
 
 
 
@@ -277,7 +359,7 @@ function convertirFacturaCOP(){
     costoCasillero.textContent=`Costo Casillero: $${convertirPesos(calcularCostoCasillero(pesoProducto,cantidad))} COP`;
 
     let costoImpuestos=document.getElementById("costoImpuestos");
-    costoImpuestos.textContent=`Costo venta(impuestos):$${convertirPesos(calcularCostoImpuestos(precioProducto,cantidad))} COP`;
+    costoImpuestos.textContent=`Costo venta con impuestos: $${convertirPesos(calcularCostoImpuestos(precioProducto,cantidad))} COP`;
 
     let costoTotal=document.getElementById("costoTotal");
     costoTotal.textContent=`Costo Total: $${convertirPesos((calcularCostoCasillero(pesoProducto,cantidad))+(calcularCostoImpuestos(precioProducto,cantidad)))} COP`;
@@ -294,15 +376,15 @@ function convertirFacturaDolares(){
     let cantidad=document.getElementById("cantidad").value;
 
     let precioIndividual=document.getElementById("precioUnitarioCarrito");
-    precioIndividual.textContent=`Costo unitario: $${precioConsola} USD`;
+    precioIndividual.textContent=`Costo unitario: $${precioProducto} USD`;
 
     let costoCasillero=document.getElementById("costoCasillero");
-    costoCasillero.textContent=`Costo Casillero: $${calcularCostoCasillero(pesoConsola,cantidad)} USD`;
+    costoCasillero.textContent=`Costo Casillero: $${calcularCostoCasillero(pesoProducto,cantidad)} USD`;
 
     let costoImpuestos=document.getElementById("costoImpuestos");
-    costoImpuestos.textContent=`Costo venta(impuestos):$${calcularCostoImpuestos(precioConsola,cantidad)} USD`;
+    costoImpuestos.textContent=`Costo venta con impuestos: $${calcularCostoImpuestos(precioProducto,cantidad)} USD`;
 
     let costoTotal=document.getElementById("costoTotal");
-    costoTotal.textContent=`Costo Total: $${(calcularCostoCasillero(pesoConsola,cantidad))+(calcularCostoImpuestos(precioConsola,cantidad))} USD`;
+    costoTotal.textContent=`Costo Total: $${(calcularCostoCasillero(pesoProducto,cantidad))+(calcularCostoImpuestos(precioProducto,cantidad))} USD`;
 
 }
