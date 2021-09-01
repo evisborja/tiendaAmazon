@@ -6,7 +6,7 @@ let pedidos=[
         precio:750,
         peso:14.5,
         cantidad:2,
-        foto:"https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/ps5.jpg?raw=true"
+        foto:"https://www.muycomputer.com/wp-content/uploads/2021/08/PS5.jpg"
     },
 
     {
@@ -15,7 +15,124 @@ let pedidos=[
         precio:750,
         peso:14.5,
         cantidad:2,
-        foto:"https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/xbox.jpg?raw=true"
+        foto:"https://www.muycomputer.com/wp-content/uploads/2020/03/Xbox-Series-X-5-1000x600.jpg"
+    },
+
+    {
+        id:3,
+        nombre:"Nintendo Switch",
+        precio:409,
+        peso:4.75,
+        cantidad:2,
+        foto:"https://www.muycomputer.com/wp-content/uploads/2021/01/nueva-Nintendo-Switch-1-1000x600.jpg"
+    },
+
+    {
+        id:4,
+        nombre:"Mackbook Air",
+        precio:381,
+        peso:2.38,
+        cantidad:2,
+        foto:"https://www.muycomputer.com/wp-content/uploads/2020/03/MacBook_Air.jpg"
+    },
+
+    {
+        id:5,
+        nombre:"AirPods",
+        precio:170,
+        peso:1,
+        cantidad:2,
+        foto:"https://www.muycomputer.com/wp-content/uploads/2020/10/Nuevos-Apple-AirPods-baratos-2021-1000x600.jpg"
+    },
+
+    {
+        id:6,
+        nombre:"Audifonos Sony",
+        precio:98,
+        peso:1.8,
+        cantidad:2,
+        foto:"https://actualizar-android.com/wp-content/uploads/2020/12/1608585737_143_Sony-lanza-los-audifonos-verdaderamente-inalambricos-WF-XB700-y-los-audifonos.png"
+    },
+
+    {
+        id:7,
+        nombre:"Bocina JBL",
+        precio:99,
+        peso:2.3,
+        cantidad:2,
+        foto:"https://github.com/evisborja/img/blob/main/bocinas.jpg?raw=true"
+    },
+
+    {
+        id:8,
+        nombre:"Celular Huawei",
+        precio:800,
+        peso:1.2,
+        cantidad:2,
+        foto:"https://github.com/evisborja/img/blob/main/celulares.jpg?raw=true"
+    },
+
+    {
+        id:9,
+        nombre:"Monitor LG",
+        precio:237,
+        peso:13.9,
+        cantidad:2,
+        foto:"https://github.com/evisborja/img/blob/main/monitores.jpg?raw=true"
+    },
+
+    {
+        id:10,
+        nombre:"Mouse Microsoft",
+        precio:20,
+        peso:1.0,
+        cantidad:2,
+        foto:"https://github.com/evisborja/img/blob/main/mouse.jpg?raw=true"
+    },
+
+    {
+        id:11,
+        nombre:"Nevera Samsung",
+        precio:400,
+        peso:200,
+        cantidad:2,
+        foto:"https://github.com/evisborja/img/blob/main/neveras.jpg?raw=true"
+    },
+
+    {
+        id:12,
+        nombre:"SmartWacth Xiaomi",
+        precio:150,
+        peso:1.0,
+        cantidad:2,
+        foto:"https://github.com/evisborja/img/blob/main/smartwatch.jpg?raw=true"
+    },
+
+    {
+        id:13,
+        nombre:"Teclado Inalambrico",
+        precio:255,
+        peso:3.5,
+        cantidad:2,
+        foto:"https://github.com/evisborja/img/blob/main/teclado.jpg?raw=true"
+    },
+
+    {
+        id:14,
+        nombre:"EarBuds",
+        precio:175,
+        peso:1.0,
+        cantidad:2,
+        foto:"https://github.com/evisborja/img/blob/main/airbuds.jpg?raw=true"
+    },
+
+    {
+        id:15,
+        nombre:"Televisor Smart",
+        precio:999,
+        peso:24.9,
+        cantidad:2,
+        foto:"https://github.com/evisborja/img/blob/main/televisor.jpg?raw=true"
     }
 ];
 
@@ -49,6 +166,31 @@ pedidos.forEach(function(pedido){
     texto1.classList.add("card-text");
     texto1.textContent= `Cantidad: ${pedido.cantidad}`;
 
+    let footer=document.createElement("div");
+    footer.classList.add("card-footer");
+
+    let boton1=document.createElement("button");
+    boton1.classList.add("btn");
+    boton1.classList.add("btn-danger");
+    boton1.textContent="Eliminar";
+
+    let icono=document.createElement("i");
+    icono.classList.add("fas");
+    icono.classList.add("fa-trash-alt");
+    icono.classList.add("ms-1");
+
+    let boton2=document.createElement("button");
+    boton2.classList.add("btn");
+    boton2.classList.add("btn-warning");
+    boton2.classList.add("ms-2");
+    boton2.textContent="Editar";
+
+    let icono2=document.createElement("i");
+    icono2.classList.add("far");
+    icono2.classList.add("fa-edit");
+    icono2.classList.add("ms-1")
+
+
     
     contenedorPadre.appendChild(columna);
     columna.appendChild(cuerpo);
@@ -57,6 +199,12 @@ pedidos.forEach(function(pedido){
     cuerpo1.appendChild(h5);
     cuerpo1.appendChild(texto);
     cuerpo1.appendChild(texto1);
+    cuerpo.appendChild(footer);
+    footer.appendChild(boton1);
+    boton1.appendChild(icono);
+    footer.appendChild(boton2);
+    boton2.appendChild(icono2);
+    
 
     
    // ``
