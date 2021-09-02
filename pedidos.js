@@ -6,7 +6,7 @@ let pedidos=[
         precio:750,
         peso:14.5,
         cantidad:2,
-        foto:"https://www.muycomputer.com/wp-content/uploads/2021/08/PS5.jpg"
+        foto:"https://github.com/evisborja/img/blob/main/ps5.jpg?raw=true"
     },
 
     {
@@ -15,7 +15,7 @@ let pedidos=[
         precio:750,
         peso:14.5,
         cantidad:2,
-        foto:"https://www.muycomputer.com/wp-content/uploads/2020/03/Xbox-Series-X-5-1000x600.jpg"
+        foto:"https://github.com/evisborja/img/blob/main/xbox.jpg?raw=true"
     },
 
     {
@@ -24,7 +24,7 @@ let pedidos=[
         precio:409,
         peso:4.75,
         cantidad:2,
-        foto:"https://www.muycomputer.com/wp-content/uploads/2021/01/nueva-Nintendo-Switch-1-1000x600.jpg"
+        foto:"https://github.com/evisborja/img/blob/main/nintendo.jpg?raw=true"
     },
 
     {
@@ -33,7 +33,7 @@ let pedidos=[
         precio:381,
         peso:2.38,
         cantidad:2,
-        foto:"https://www.muycomputer.com/wp-content/uploads/2020/03/MacBook_Air.jpg"
+        foto:"https://github.com/evisborja/img/blob/main/mac.jpg?raw=true"
     },
 
     {
@@ -42,7 +42,7 @@ let pedidos=[
         precio:170,
         peso:1,
         cantidad:2,
-        foto:"https://www.muycomputer.com/wp-content/uploads/2020/10/Nuevos-Apple-AirPods-baratos-2021-1000x600.jpg"
+        foto:"https://github.com/evisborja/img/blob/main/airPods1.jpg?raw=true"
     },
 
     {
@@ -51,16 +51,16 @@ let pedidos=[
         precio:98,
         peso:1.8,
         cantidad:2,
-        foto:"https://actualizar-android.com/wp-content/uploads/2020/12/1608585737_143_Sony-lanza-los-audifonos-verdaderamente-inalambricos-WF-XB700-y-los-audifonos.png"
+        foto:"https://github.com/evisborja/img/blob/main/audifonosSony.png?raw=true"
     },
 
     {
         id:7,
-        nombre:"Bocina JBL",
+        nombre:"Bocina Sony",
         precio:99,
         peso:2.3,
         cantidad:2,
-        foto:"https://github.com/evisborja/img/blob/main/bocinas.jpg?raw=true"
+        foto:"https://github.com/evisborja/img/blob/main/bocinasSony.jpg?raw=true"
     },
 
     {
@@ -69,7 +69,7 @@ let pedidos=[
         precio:800,
         peso:1.2,
         cantidad:2,
-        foto:"https://github.com/evisborja/img/blob/main/celulares.jpg?raw=true"
+        foto:"https://github.com/evisborja/img/blob/main/cel.jpg?raw=true"
     },
 
     {
@@ -87,7 +87,7 @@ let pedidos=[
         precio:20,
         peso:1.0,
         cantidad:2,
-        foto:"https://github.com/evisborja/img/blob/main/mouse.jpg?raw=true"
+        foto:"https://github.com/evisborja/img/blob/main/mouseMicro.jpg?raw=true"
     },
 
     {
@@ -105,7 +105,7 @@ let pedidos=[
         precio:150,
         peso:1.0,
         cantidad:2,
-        foto:"https://github.com/evisborja/img/blob/main/smartwatch.jpg?raw=true"
+        foto:"https://github.com/evisborja/img/blob/main/smartWa.jpg?raw=true"
     },
 
     {
@@ -114,7 +114,7 @@ let pedidos=[
         precio:255,
         peso:3.5,
         cantidad:2,
-        foto:"https://github.com/evisborja/img/blob/main/teclado.jpg?raw=true"
+        foto:"https://github.com/evisborja/img/blob/main/teclados.jpg?raw=true"
     },
 
     {
@@ -123,7 +123,7 @@ let pedidos=[
         precio:175,
         peso:1.0,
         cantidad:2,
-        foto:"https://github.com/evisborja/img/blob/main/airbuds.jpg?raw=true"
+        foto:"https://github.com/evisborja/img/blob/main/aud.png?raw=true"
     },
 
     {
@@ -181,7 +181,7 @@ pedidos.forEach(function(pedido){
 
     let boton2=document.createElement("button");
     boton2.classList.add("btn");
-    boton2.classList.add("btn-warning");
+    boton2.classList.add("btn-success");
     boton2.classList.add("ms-2");
     boton2.textContent="Editar";
 
