@@ -60,7 +60,8 @@ let pedidos=[
         precio:99,
         peso:2.3,
         cantidad:2,
-        foto:"https://github.com/evisborja/img/blob/main/bocinasSony.jpg?raw=true"
+
+
     },
 
     {
@@ -69,7 +70,7 @@ let pedidos=[
         precio:800,
         peso:1.2,
         cantidad:2,
-        foto:"https://github.com/evisborja/img/blob/main/cel.jpg?raw=true"
+
     },
 
     {
@@ -87,7 +88,7 @@ let pedidos=[
         precio:20,
         peso:1.0,
         cantidad:2,
-        foto:"https://github.com/evisborja/img/blob/main/mouseMicro.jpg?raw=true"
+
     },
 
     {
@@ -105,7 +106,7 @@ let pedidos=[
         precio:150,
         peso:1.0,
         cantidad:2,
-        foto:"https://github.com/evisborja/img/blob/main/smartWa.jpg?raw=true"
+
     },
 
     {
@@ -114,7 +115,7 @@ let pedidos=[
         precio:255,
         peso:3.5,
         cantidad:2,
-        foto:"https://github.com/evisborja/img/blob/main/teclados.jpg?raw=true"
+
     },
 
     {
@@ -123,7 +124,7 @@ let pedidos=[
         precio:175,
         peso:1.0,
         cantidad:2,
-        foto:"https://github.com/evisborja/img/blob/main/aud.png?raw=true"
+
     },
 
     {
